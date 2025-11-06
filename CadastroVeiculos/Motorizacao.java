@@ -5,7 +5,8 @@ package aula05;
  */
 
 public class Motorizacao {
-    private static int idMotorizacao = 0;
+    private static int cont = 0;
+    private int idMotorizacao;
     private String modelo;
     private String numeroSerie;
     private int cilindrada;
@@ -14,10 +15,11 @@ public class Motorizacao {
         this.modelo = Modelo;
         this.numeroSerie = NumeroSerie;
         this.cilindrada = cilindrada;
-        idMotorizacao++;
+        cont++;
+        this.idMotorizacao = cont;
     }
 
-    public static int getIdMotorizacao() {
+    public int getIdMotorizacao() {
         return idMotorizacao;
     }
 
@@ -49,13 +51,10 @@ public class Motorizacao {
     public String toString() {
         return "Motorização: " + modelo + ", " + cilindrada + ", Número de Serie: " + numeroSerie;
     }
-    
+
     public void print() {
         System.out.println("Modelo: " + modelo);
         System.out.println("Cilindrada: " + cilindrada);
         System.out.println("Numero de Serie: " + numeroSerie);
-    }
-    
-    
-    
+    }   
 }
